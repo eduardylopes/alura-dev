@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 100%;
+}
+
+.profile {
+    align-items: center;
+    display: flex;
+}
+
+.profile > img {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+
+.profile > p {
+    color: #fff;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.header > input {
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.16);
+    width: 52.2%;
+    padding-left: 0.5rem;
+}
+
+.header > input::placeholder {
+    color: #FFFFFF;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.64;
+    padding: 0.5rem;
+}
