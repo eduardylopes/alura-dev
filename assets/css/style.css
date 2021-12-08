@@ -1,4 +1,5 @@
 .app {
     background: #051D3B;
-    display: flex;
+    font-family: Inter;
+    margin: 2rem;
 }
