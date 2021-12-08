@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
     <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/project.css">
 </head>
 <body class="app">
     <header class="header">
@@ -22,22 +23,43 @@
         </div>
     </header>
     <main>
-        <nav class="menu">
-            <h2 class="menu__title">Menu</h2>
-            <ul class="menu__list">
-                <li class="menu__container">
-                    <div class="menu__code-icon"></div>
-                    <a class="menu__link-code" href="#">Editor de código</a>
-                </li>
-                <li class="menu__container">
-                    <div class="menu__users-icon"></div>
-                    <a class="menu__link-users" href="#">Comunidade</a>
-                </li>
-            </ul>
-        </nav>
-        <section>
-            in
-        </section>
+        <div class="main-content">
+            <nav class="menu">
+                <h2 class="menu__title">Menu</h2>
+                <ul class="menu__list">
+                    <li class="menu__container">
+                        <div class="menu__icon menu--code-icon"></div>
+                        <a class="menu__link-code " href="#">Editor de código</a>
+                    </li>
+                    <li class="menu__container">
+                        <div class="menu__icon menu--users-icon"></div>
+                        <a class="menu__link-users" href="#">Comunidade</a>
+                    </li>
+                </ul>
+            </nav>
+            <section class="code-editor">
+                <input class="code-editor__input" type="text">
+            </section>
+            <section class="project">
+                <div class="project-details">
+                    <h2 class="project-details__title">Seu projeto</h2>
+                    <input class="project__input" type="text" placeholder="Nome do seu projeto">
+                    <input class="project__input" type="text" placeholder="Descrição do seu projeto">
+                </div>
+                <div class="project-customization">
+                    <h2 class="customization__title">Personalização</h2>
+                    <select class="project__input input--style" name="">
+                        <option class="project__option" value="" selected>JavaScript</option>
+                        <option class="project__option" value="">HTML</option>
+                        <option class="project__option" value="">CSS</option>
+                    </select>
+                    <div class="color-picker-margin">
+                        <button class="color-picker-button"></button>
+                    </div>
+                </div>
+                <button class="project__save-button">Salvar projeto</button>
+            </section>
+        </div>
     </main>
 </body>
 </html>

@@ -25,6 +25,7 @@
 }
 
 .header__seach-bar {
+    position: relative;
     color: #fff;
     border: none;
     border-radius: 0.5rem;
