@@ -1,3 +1,7 @@
+.project {
+    width: 18.88%;
+}
+
 .project, .project-details, .project-customization {
     display: flex;
     flex-direction: column;
@@ -14,7 +18,7 @@
 .project__input {
     color: #fff;
     padding-left: 0.5rem;
-    width: 272px;
+    width: auto;
     height: 56px;
     background: rgba(255, 255, 255, 0.16);
     border-radius: 8px;
@@ -35,8 +39,9 @@
 }
 
 .color-picker-margin {
-    width: 272px;
-    height: 56px;
+    width: auto;
+    padding: 0.5rem;
+    height: 3.5rem;
     background: rgba(196, 196, 196, 0.01);
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
@@ -47,15 +52,17 @@
     margin-bottom: 2rem;
 }
 
-.color-picker-button {
+.color-picker-btn {
     background: #6BD1FF;
-    border-radius: 4px;
     border: none;
-    width: 256px;
-    height: 40px;
+    width: auto;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
 }
 
-.project__save-button {
+.project__save-btn {
     background: #5081FB;
     border-radius: 8px;
     border: none;

@@ -1,0 +1,53 @@
+.code-editor {
+    display: flex;
+    flex-direction: column;
+    width: 52.22%;
+}
+
+.code-editor__frame {
+    background-color: #6BD1FF;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    height: 80%;
+}
+
+.code-editor__container {
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    padding: 1rem;
+    border-radius: 8px;
+    width: auto;
+    height: 100%;
+}
+
+.code-editor__mac-btn {
+    background: left top no-repeat url(../images/mac_buttons.svg);
+    height: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.code-editor__textarea {
+    width: auto;
+    height: 100%;
+    resize: none;
+    outline: none;
+    background-color: #141414;
+    border: none;
+    font-family: Roboto Mono;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    color: #FFF;
+}
+
+.code-editor__btn {
+    width: 100%;
+    border: none;
+    line-height: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+    background: rgba(80, 129, 251, 0.08);
+    border-radius: 8px;
+    color: #FFF;
+}
