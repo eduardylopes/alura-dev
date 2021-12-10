@@ -6,72 +6,76 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Alura Dev</title>
-  <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/header.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&family=Roboto+Mono&display=swap">
   <link rel="stylesheet" href="./assets/css/menu.css">
   <link rel="stylesheet" href="./assets/css/project.css">
-  <link rel="stylesheet" href="./assets/css/code-editor.css">
+  <link rel="stylesheet" href="./assets/css/code.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
 </head>
 
 <body class="app">
   <header class="header">
-    <div class="header__container">
-      <img class="header__logo" src="./assets/images/Logo.svg" alt="Logo da Alura Dev">
-    </div>
-    <input class="header__seach-bar" type="text" placeholder="Busque por algo">
+    <img class="header__logo" src="./assets/images/Logo.svg" alt="Logo da Alura Dev">
+    <input class="input" type="text" placeholder="Busque por algo">
     <div class="header__profile">
       <img class="header__user-image" src="./assets/images/Photo.png" alt="Foto de perfil">
       <p class="header__user-name">Harry</p>
     </div>
   </header>
-  <main>
-    <div class="main-content">
-      <nav class="menu">
-        <h2 class="menu__title">Menu</h2>
-        <ul class="menu__list">
-          <li class="menu__container">
-            <div class="menu__icon menu--code-icon"></div>
-            <a class="menu__link-code " href="#">Editor de código</a>
-          </li>
-          <li class="menu__container">
-            <div class="menu__icon menu--users-icon"></div>
-            <a class="menu__link-users" href="#">Comunidade</a>
-          </li>
-        </ul>
-      </nav>
-      <section class="code-editor">
-        <div class="code-editor__frame">
-          <div class="code-editor__container">
-            <div class="code-editor__mac-btn"></div>
-            <textarea class="code-editor__textarea" name="" id="" cols="30" rows="10"></textarea>
-          </div>
+  <main class="main-content">
+    <nav class="menu">
+      <h2 class="menu__title">Menu</h2>
+      <ul class="menu__list">
+        <li class="menu__container">
+          <div class="menu__icon menu--code-icon"></div>
+          <a class="menu__link-code " href="#">Edito de código</a>
+        </li>
+        <li class="menu__container">
+          <div class="menu__icon menu--users-icon"></div>
+          <a class="menu__link-users" href="#">Comunidade</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="code">
+      <div class="code__frame">
+        <div class="code__container">
+          <div class="code__mac-icon"></div>
+          <textarea class="code__textarea" name="" id="" cols="30" rows="10">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+            
+const unfold = (f, seed) => {
+  const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}
+          </textarea>
         </div>
-        <button class="code-editor__btn">Visualizar com o hightlight</button>
-      </section>
-      <section class="project">
-        <div class="project-details">
-          <h2 class="project-details__title">Seu projeto</h2>
-          <input class="project__input" type="text" placeholder="Nome do seu projeto">
-          <input class="project__input" type="text" placeholder="Descrição do seu projeto">
-        </div>
-        <div class="project-customization">
-          <h2 class="customization__title">Personalização</h2>
-          <select class="project__input input--style" name="">
-            <option class="project__option" value="" selected>JavaScript</option>
-            <option class="project__option" value="">HTML</option>
-            <option class="project__option" value="">CSS</option>
-          </select>
-          <div class="color-picker-margin">
-            <button class="color-picker-btn"></button>
-          </div>
-        </div>
-        <button class="project__save-btn">Salvar projeto</button>
-      </section>
-    </div>
+      </div>
+      <button class="code__btn">Visualizar com o hightlight</button>
+    </section>
+    <section class="project">
+      <h2 class="project__title">Seu projeto</h2>
+      <input class="input" type="text" placeholder="Nome do seu projeto">
+      <textarea class="input" type="text" placeholder="Descrição do seu projeto"></textarea>
+      <h2 class="project__title">Personalização</h2>
+      <select class="input" name="">
+        <option class="project__option" value="" selected>JavaScript</option>
+        <option class="project__option" value="">HTML</option>
+        <option class="project__option" value="">CSS</option>
+      </select>
+      <div class="color-picker__frame">
+        <button class="color-picker__btn"></button>
+      </div>
+      <button class="project__save-btn">Salvar projeto</button>
+    </section>
   </main>
 </body>
 

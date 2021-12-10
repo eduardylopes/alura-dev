@@ -1,53 +1,55 @@
-.code-editor {
+.code {
     display: flex;
     flex-direction: column;
-    width: 52.22%;
 }
 
-.code-editor__frame {
+.code__frame {
     background-color: #6BD1FF;
     border-radius: 0.5rem;
     padding: 2rem;
     margin-bottom: 2rem;
-    height: 80%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
-.code-editor__container {
+.code__container {
     display: flex;
     flex-direction: column;
     background-color: #141414;
+    box-sizing: border-box;
     padding: 1rem;
     border-radius: 8px;
     width: auto;
     height: 100%;
 }
 
-.code-editor__mac-btn {
-    background: left top no-repeat url(../images/mac_buttons.svg);
-    height: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.code-editor__textarea {
+.code__textarea {
     width: auto;
     height: 100%;
     resize: none;
     outline: none;
     background-color: #141414;
     border: none;
-    font-family: Roboto Mono;
+    font-family: var(--text-area-font);
     font-size: 0.875rem;
     line-height: 1.125rem;
-    color: #FFF;
+    color: var(--text-color);
+    text-align: left;
+    vertical-align: top;
 }
 
-.code-editor__btn {
-    width: 100%;
+.code__mac-icon {
+    background: left top no-repeat url(../images/mac_buttons.svg);
+    height: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.code__btn {
     border: none;
     line-height: 2rem;
     text-align: center;
     padding: 1rem 0;
     background: rgba(80, 129, 251, 0.08);
     border-radius: 8px;
-    color: #FFF;
+    color: var(--text-color);
 }

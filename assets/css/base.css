@@ -1,0 +1,37 @@
+:root {
+    --background: #051D3B;
+
+    --text-color: #FFFFFF;
+    --input-text-color: #FFFFFF64;
+
+    --input-background: #FFFFFF29;
+    --input-hover: #FFFFFF3D;
+
+    --save-btn-normal: #5081FB;
+    --save-btn-text: #051D3B;
+
+
+    --btn-color-picker: #6BD1FF;
+    --btn-normal: #5081FB;
+    --btn-hover: #7BA4FC;
+    --btn-pressed: #7BA4FC;
+    --btn-focus: #96B9FD;
+
+    --icon-btn-hover: #5081FB14;
+    --icon-btn-pressed: #5081FB29;
+
+    --icon-menu-normal: #5081FB29;
+    --icon-menu-hover: #5081FBA3;
+    --icon-menu-pressed: #5081FB;
+
+    --icon-comment-hover: #FFFFFF08;
+    --icon-comment-pressed: #FFFFFF29;
+
+    --icon-favorite-hover: #FFFFFF08;
+    --icon-favorite-pressed: #FFFFFF29;
+
+    --icon-user-hover: #FFFFFF08;
+
+    --text-area-font: 'Roboto Mono', sans-serif;
+    --general-font: 'Inter', sans-serif;
+}

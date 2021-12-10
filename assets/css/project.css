@@ -1,61 +1,39 @@
 .project {
-    width: 18.88%;
-}
-
-.project, .project-details, .project-customization {
     display: flex;
     flex-direction: column;
 }
 
-.project-details {
-    margin-bottom: 1.5rem;
+.project__title {
+    margin-bottom: 0.75rem;
 }
 
-.project-details__title {
+.project *:nth-child(4) {
+    margin-top: 2.5rem;
+}
+
+.project .input {
     margin-bottom: 1rem;
-}
-
-.project__input {
-    color: #fff;
-    padding-left: 0.5rem;
-    width: auto;
-    height: 56px;
-    background: rgba(255, 255, 255, 0.16);
-    border-radius: 8px;
-    border: none;
-    margin-bottom: 1rem;
-
-}
-
-.project__input::placeholder, .input--style {
-    color: #FFF;
-    opacity: 0.64;
-    padding: 0.5rem;
 }
 
 .project__option {
     color: rgba(255, 255, 255, 0.64);
-    background:rgba(45, 65, 91, 1);
+    background: var(--background);
 }
 
-.color-picker-margin {
-    width: auto;
+.color-picker__frame {
     padding: 0.5rem;
     height: 3.5rem;
-    background: rgba(196, 196, 196, 0.01);
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--text-color);
     box-sizing: border-box;
     border-radius: 8px;
-    display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
 }
 
-.color-picker-btn {
-    background: #6BD1FF;
+.color-picker__btn {
+    background-color: var(--btn-color-picker);
     border: none;
-    width: auto;
     height: auto;
     width: 100%;
     height: 100%;
@@ -63,10 +41,10 @@
 }
 
 .project__save-btn {
-    background: #5081FB;
+    background-color: var(--save-btn-normal);
     border-radius: 8px;
     border: none;
-    color: #051D3B;
+    color: var(--save-btn-text);
     line-height: 2rem;
     text-align: center;
     padding: 1rem 0;
