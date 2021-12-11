@@ -4,19 +4,27 @@
     margin-bottom: 1rem;
 }
 
-.menu--code-icon {
-    background: center no-repeat url(../images/icon_code.svg);
-}
+.menu__icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 3rem;
+    height: 3rem;
+    
+    border-radius: 1rem;
+    margin-right: 1rem;
 
-.menu--users-icon {
-    background: center no-repeat url(../images/icon_users.svg);
+    background-color: var(--icon-menu-normal);
 }
 
 .menu__icon {
-    background-color: var(--icon-menu-normal);
-    border-radius: 1rem;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    margin-right: 1rem;
-    padding: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu {
+        display: none;
+    }
 }

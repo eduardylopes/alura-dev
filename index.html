@@ -22,30 +22,42 @@
   <header class="header">
     <img class="header__logo" src="./assets/images/Logo.svg" alt="Logo da Alura Dev">
     <input class="input" type="text" placeholder="Busque por algo">
+    <div class="header_buttons">
+      <button class="header_search-btn">
+        <img class="header__search" src="./assets/images/icon-seearch.svg" alt="">
+      </button>
+      <button class="header_menu-btn">
+        <img class="header__menu-hamburger" src="./assets/images/icon_hamburguer.svg" alt="">
+      </button>
+    </div>
     <div class="header__profile">
       <img class="header__user-image" src="./assets/images/Photo.png" alt="Foto de perfil">
       <p class="header__user-name">Harry</p>
     </div>
   </header>
   <main class="main-content">
-    <nav class="menu">
+    <aside class="menu">
       <h2 class="menu__title">Menu</h2>
       <ul class="menu__list">
         <li class="menu__container">
-          <div class="menu__icon menu--code-icon"></div>
+          <div class="menu__icon-container">
+            <img class="menu__icon" src="./assets/images/icon_code.svg" alt="">
+          </div>
           <a class="menu__link-code " href="#">Edito de código</a>
         </li>
         <li class="menu__container">
-          <div class="menu__icon menu--users-icon"></div>
+          <div class="menu__icon-container">
+            <img class="menu__icon" src="./assets/images/icon_users.svg" alt="">
+          </div>
           <a class="menu__link-users" href="#">Comunidade</a>
         </li>
       </ul>
-    </nav>
+    </aside>
     <section class="code">
       <div class="code__frame">
         <div class="code__container">
           <div class="code__mac-icon"></div>
-          <textarea class="code__textarea" name="" id="" cols="30" rows="10">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+          <textarea class="code__textarea" name="" id="" cols="30" rows="10" contenteditable>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
             
@@ -66,13 +78,15 @@ const unfold = (f, seed) => {
       <input class="input" type="text" placeholder="Nome do seu projeto">
       <textarea class="input" type="text" placeholder="Descrição do seu projeto"></textarea>
       <h2 class="project__title">Personalização</h2>
-      <select class="input" name="">
-        <option class="project__option" value="" selected>JavaScript</option>
-        <option class="project__option" value="">HTML</option>
-        <option class="project__option" value="">CSS</option>
-      </select>
-      <div class="color-picker__frame">
-        <button class="color-picker__btn"></button>
+      <div class="align-row">
+        <select class="input" name="">
+          <option class="project__option" value="" selected>JavaScript</option>
+          <option class="project__option" value="">HTML</option>
+          <option class="project__option" value="">CSS</option>
+        </select>
+        <div class="color-picker__frame align-row">
+          <button class="color-picker__btn"></button>
+        </div>
       </div>
       <button class="project__save-btn">Salvar projeto</button>
     </section>

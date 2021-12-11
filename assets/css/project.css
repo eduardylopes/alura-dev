@@ -16,7 +16,7 @@
 }
 
 .project__option {
-    color: rgba(255, 255, 255, 0.64);
+    color: var(--input-text-color);
     background: var(--background);
 }
 
@@ -48,4 +48,22 @@
     line-height: 2rem;
     text-align: center;
     padding: 1rem 0;
+}
+
+@media screen and (max-width: 1024px){
+    .align-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .align-row .input {
+        margin-bottom: 0px;
+    }
+
+    .color-picker__frame {
+        display: flex;
+        margin: 0px;
+    }
 }

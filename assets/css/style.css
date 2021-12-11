@@ -13,6 +13,12 @@
     grid-template-columns: 1fr 2.5fr 1.1fr;
 }
 
+@media screen and (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 h2 {
     letter-spacing: 0.4em;
     text-transform: uppercase;
