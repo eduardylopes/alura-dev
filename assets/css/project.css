@@ -7,12 +7,12 @@
     margin-bottom: 0.75rem;
 }
 
-.project *:nth-child(4) {
-    margin-top: 2.5rem;
-}
-
 .project .input {
     margin-bottom: 1rem;
+}
+
+.project :nth-child(3) {
+    margin-bottom: 2.5rem;
 }
 
 .project__option {
@@ -48,10 +48,11 @@
     line-height: 2rem;
     text-align: center;
     padding: 1rem 0;
+    margin-bottom: 2.5rem;
 }
 
 @media screen and (max-width: 1024px){
-    .align-row {
+    .project_customization-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -65,5 +66,13 @@
     .color-picker__frame {
         display: flex;
         margin: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project_customization-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
     }
 }

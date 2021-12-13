@@ -35,3 +35,21 @@
     --text-area-font: 'Roboto Mono', sans-serif;
     --general-font: 'Inter', sans-serif;
 }
+
+body {
+    background: var(--background);
+    font-family: var(--general-font);
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 2rem;
+}
+
+h2 {
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 2rem;
+}

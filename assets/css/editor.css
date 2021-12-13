@@ -1,9 +1,9 @@
-.code {
+.editor {
     display: flex;
     flex-direction: column;
 }
 
-.code__frame {
+.editor__frame {
     background-color: #6BD1FF;
     border-radius: 0.5rem;
     padding: 2rem;
@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 
-.code__container {
+.editor__container {
     display: flex;
     flex-direction: column;
     background-color: #141414;
@@ -23,7 +23,15 @@
     height: 100%;
 }
 
-.code__textarea {
+.editor__mac-icon {
+    position: relative;
+    left: 0rem;
+    width: 3.25rem;
+    height: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.editor__textarea {
     width: auto;
     height: 100%;
     resize: none;
@@ -35,16 +43,9 @@
     line-height: 1.125rem;
     color: var(--text-color);
     text-align: left;
-    vertical-align: top;
 }
 
-.code__mac-icon {
-    background: left top no-repeat url(../images/mac_buttons.svg);
-    height: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.code__btn {
+.editor__btn {
     border: none;
     line-height: 2rem;
     text-align: center;
@@ -52,4 +53,5 @@
     background: rgba(80, 129, 251, 0.08);
     border-radius: 8px;
     color: var(--text-color);
+    margin-bottom: 2rem;
 }
