@@ -14,16 +14,19 @@
     href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&family=Roboto+Mono&display=swap">
   <link rel="stylesheet" href="./assets/css/menu.css">
   <link rel="stylesheet" href="./assets/css/project.css">
-  <link rel="stylesheet" href="./assets/css/editor.css">
   <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/dracula.css">
+  <link rel="stylesheet" href="./assets/css/editor.css">
 </head>
 
 <body>
   <header class="header">
-    <img class="header__logo" src="./assets/images/Logo.svg" alt="Logo da Alura Dev" data-header-logo>
+    <a class="header__logo" href="./index.html" data-header-logo>
+      <img class="header__logo" src="./assets/images/Logo.svg" alt="Logo da Alura Dev">
+  </a>
     <input class="input" type="text" placeholder="Busque por algo" data-header-input>
     <div class="header__buttons">
-      <button class="header__search-btn is-open" data-search-btn></button>
+      <button class="header__search-btn" data-search-btn></button>
       <button class="header__menu-btn" data-menu-btn></button>
     </div>
     <div class="header__profile" data-header-profile>
@@ -36,17 +39,17 @@
     <aside class="menu">
       <h2 class="menu__title">Menu</h2>
       <ul class="menu__list" data-menu-list>
-        <li class="menu__container">
-          <div class="menu__icon-container">
-            <img class="menu__icon" src="./assets/images/icon_code.svg" alt="">
-          </div>
-          <a class="menu__link-code " href="#">Edito de código</a>
+        <li class="menu__container not-opacity">
+            <a href="./index.html" class="menu__icon-container">
+              <img class="menu__icon" src="./assets/images/icon_code.svg" alt="">
+            </a>
+            <a class="menu__link-code " href="./index.html" data-menu-editor>Edito de código</a>
         </li>
-        <li class="menu__container">
-          <div class="menu__icon-container">
+        <li class="menu__container is-opacity">
+          <a href="./community.html" class="menu__icon-container">
             <img class="menu__icon" src="./assets/images/icon_users.svg" alt="">
-          </div>
-          <a class="menu__link-users" href="#">Comunidade</a>
+          </a>
+          <a class="menu__link-users" href="./community.html" data-menu-community>Comunidade</a>
         </li>
       </ul>
     </aside>
@@ -54,10 +57,20 @@
       <div class="editor__frame">
         <div class="editor__container">
           <img class="editor__mac-icon" src="./assets/images/mac_icon.svg">
-          <textarea class="editor__textarea" name="" id="" cols="10" rows="10" contenteditable>###</textarea>
+          <code class="editor__code-wrapper hljs" spellcheck="false" contenteditable="true" aria-label="Editor de código" data-code-editor>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+  const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}</code>
         </div>
       </div>
-      <button class="editor__btn">Visualizar com o hightlight</button>
+      <button class="editor__btn" data-hljs-btn>Visualizar com o highlight</button>
     </section>
     <section class="project">
       <h2 class="project__title">Seu projeto</h2>
@@ -65,10 +78,15 @@
       <textarea class="input" type="text" placeholder="Descrição do seu projeto"></textarea>
       <h2 class="project__title">Personalização</h2>
       <div class="project_customization-container">
-        <select class="input" name="">
-          <option class="project__option" value="" selected>JavaScript</option>
-          <option class="project__option" value="">HTML</option>
+        <select class="input" data-code-lang>
+          <option class="project__option" value="xml">HTML</option>
           <option class="project__option" value="">CSS</option>
+          <option class="project__option" value="javascript" selected>JavaScript</option>
+          <option class="project__option" value="python">Python</option>
+          <option class="project__option" value="java">Java</option>
+          <option class="project__option" value="dart">Dart</option>
+          <option class="project__option" value="rust">Rust</option>
+          <option class="project__option" value="c++">C++</option>
         </select>
         <div class="color-picker__frame align-row">
           <button class="color-picker__btn"></button>
@@ -77,7 +95,9 @@
       <button class="project__save-btn">Salvar projeto</button>
     </section>
   </main>
-  <script src="./menu.js"></script>
+  <script src="./header.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <script src="./highligh.js"></script>
 </body>
 
 </html>

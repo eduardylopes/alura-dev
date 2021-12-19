@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Alura Dev</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="./assets/css/menu.css">
+  <link rel="stylesheet" href="./assets/css/project.css">
+  <link rel="stylesheet" href="./assets/css/editor.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+</head>
+
+<body>
+  <header class="header">
+      <a href="./index.html">
+          <img class="header__logo" src="./assets/images/Logo.svg" alt="Logo da Alura Dev" data-header-logo>
+      </a>
+    <input class="input" type="text" placeholder="Busque por algo" data-header-input>
+    <div class="header__buttons">
+      <button class="header__search-btn" data-search-btn></button>
+      <button class="header__menu-btn" data-menu-btn></button>
+    </div>
+    <div class="header__profile" data-header-profile>
+      <img class="header__user-image" src="./assets/images/profile-image.jpg" alt="Foto de perfil">
+      <p class="header__user-name">Eduardy</p>
+    </div>
+    <div class="aside-menu is-hide" data-aside-menu></div>
+  </header>
+  <main class="main">
+    <aside class="menu">
+        <h2 class="menu__title">Menu</h2>
+        <ul class="menu__list" data-menu-list>
+          <li class="menu__container is-opacity">
+              <a href="./index.html" class="menu__icon-container">
+                <img class="menu__icon" src="./assets/images/icon_code.svg" alt="">
+              </a>
+              <a class="menu__link-code " href="./index.html" data-menu-editor>Edito de código</a>
+          </li>
+          <li class="menu__container not-opacity">
+            <a href="./community.html" class="menu__icon-container">
+              <img class="menu__icon" src="./assets/images/icon_users.svg" alt="">
+            </a>
+            <a class="menu__link-users" href="./community.html" data-menu-community>Comunidade</a>
+          </li>
+        </ul>
+      </aside>
+  </main>
+  <script src="./header.js"></script>
+</body>
+
+</html>

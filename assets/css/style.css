@@ -34,3 +34,21 @@
 .input::placeholder {
     color: var(--input-text-color);
 }
+
+.is-opacity {
+    opacity: 0.4;
+}
+
+.not-opacity {
+    opacity: 1;
+}
+
+
+.is-hide {
+    display: none !important;
+}
+
+.is-open {
+    display: inline !important;
+}
+

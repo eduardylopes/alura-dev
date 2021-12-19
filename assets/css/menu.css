@@ -15,7 +15,7 @@
     border-radius: 1rem;
     margin-right: 1rem;
 
-    background-color: var(--icon-menu-normal);
+    background-color: var(--btn-normal);
 }
 
 .menu__link-code:active {
