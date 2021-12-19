@@ -20,23 +20,22 @@
 
 <body>
   <header class="header">
-    <img class="header__logo" src="./assets/images/Logo.svg" alt="Logo da Alura Dev">
-    <input class="input" type="text" placeholder="Busque por algo">
-    <button class="header_search-btn">
-      <img src="./assets/images/icon-search.svg" alt="">
-    </button>
-    <button class="header_menu-btn">
-      <img src="./assets/images/icon_menu.svg" alt="">
-    </button>
-    <div class="header__profile">
+    <img class="header__logo" src="./assets/images/Logo.svg" alt="Logo da Alura Dev" data-header-logo>
+    <input class="input" type="text" placeholder="Busque por algo" data-header-input>
+    <div class="header__buttons">
+      <button class="header__search-btn is-open" data-search-btn></button>
+      <button class="header__menu-btn" data-menu-btn></button>
+    </div>
+    <div class="header__profile" data-header-profile>
       <img class="header__user-image" src="./assets/images/profile-image.jpg" alt="Foto de perfil">
       <p class="header__user-name">Eduardy</p>
     </div>
+    <div class="aside-menu is-hide" data-aside-menu></div>
   </header>
   <main class="main">
     <aside class="menu">
       <h2 class="menu__title">Menu</h2>
-      <ul class="menu__list">
+      <ul class="menu__list" data-menu-list>
         <li class="menu__container">
           <div class="menu__icon-container">
             <img class="menu__icon" src="./assets/images/icon_code.svg" alt="">
@@ -78,6 +77,7 @@
       <button class="project__save-btn">Salvar projeto</button>
     </section>
   </main>
+  <script src="./menu.js"></script>
 </body>
 
 </html>

@@ -18,6 +18,11 @@
     background-color: var(--icon-menu-normal);
 }
 
+.menu__link-code:active {
+    font-weight: 800;
+}
+
+
 .menu__icon {
     width: 1.5rem;
     height: 1.5rem;
