@@ -30,6 +30,7 @@ function setHighlightOff() {
     isCodeHighlighted = false;
 }
 
+
 hljsButton.addEventListener('click', () => {
     if (isCodeHighlighted == false) {
         setHighlightOn();
@@ -38,3 +39,5 @@ hljsButton.addEventListener('click', () => {
         setHighlightOff();
     }
 });
+
+codeLanguage.addEventListener('change', setHighlightOff);

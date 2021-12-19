@@ -54,7 +54,7 @@
       </ul>
     </aside>
     <section class="editor">
-      <div class="editor__frame">
+      <div class="editor__frame" data-color-frame>
         <div class="editor__container">
           <img class="editor__mac-icon" src="./assets/images/mac_icon.svg">
           <code class="editor__code-wrapper hljs" spellcheck="false" contenteditable="true" aria-label="Editor de código" data-code-editor>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
@@ -89,15 +89,16 @@ const unfold = (f, seed) => {
           <option class="project__option" value="c++">C++</option>
         </select>
         <div class="color-picker__frame align-row">
-          <button class="color-picker__btn"></button>
+          <input class="color-picker__btn" type="color" value="#6BD1FF" data-color-picker-button>
         </div>
       </div>
       <button class="project__save-btn">Salvar projeto</button>
     </section>
   </main>
-  <script src="./header.js"></script>
+  <script src="./assets/scripts/header.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-  <script src="./highligh.js"></script>
+  <script src="./assets/scripts/highlight.js"></script>
+  <script src="./assets/scripts/color.js"></script>
 </body>
 
 </html>
