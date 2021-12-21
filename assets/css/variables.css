@@ -1,18 +1,15 @@
 :root {
     --background: #051D3B;
-
     --aside-menu-color: #2D415B;
-;
 
     --text-color: #FFFFFF;
-    --input-text-color: #FFFFFF64;
 
-    --input-background: #FFFFFF29;
+    --input-text-color: #FFFFFF64;
+    --input-background: #FFFFFF16;
     --input-hover: #FFFFFF3D;
 
     --save-btn-normal: #5081FB;
     --save-btn-text: #051D3B;
-
 
     --btn-color-picker: #6BD1FF;
     --btn-normal: #5081FB;
@@ -37,22 +34,4 @@
 
     --text-area-font: 'Roboto Mono', sans-serif;
     --general-font: 'Inter', sans-serif;
-}
-
-body {
-    background: var(--background);
-    font-family: var(--general-font);
-    color: var(--text-color);
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin: 2rem;
-}
-
-h2 {
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: var(--text-color);
-    font-weight: normal;
-    font-size: 0.75rem;
-    line-height: 2rem;
 }

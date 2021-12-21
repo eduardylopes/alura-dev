@@ -6,7 +6,7 @@ let isCodeHighlighted = false;
 function setHighlightOn() {
     const codeText = codeArea.innerText;
 
-    codeArea.setAttribute('class', `editor__code-wrapper hjls ${codeLanguage.value}`);
+    codeArea.setAttribute('class', `code__area hjls ${codeLanguage.value}`);
     codeArea.setAttribute('contenteditable', 'false')
     codeArea.textContent = codeText;
     
@@ -21,7 +21,7 @@ function setHighlightOn() {
 function setHighlightOff() {
     const codeText = codeArea.innerText;
     
-    codeArea.setAttribute('class', 'editor__code-wrapper hljs')
+    codeArea.setAttribute('class', 'code__area hljs')
     codeArea.setAttribute('contenteditable', 'true');
     codeArea.textContent = codeText;
     

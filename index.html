@@ -10,54 +10,53 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/header.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&family=Roboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Roboto&family=Roboto+Mono&display=swap" >
   <link rel="stylesheet" href="./assets/css/menu.css">
-  <link rel="stylesheet" href="./assets/css/project.css">
-  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/settings.css">
+  <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/dracula.css">
-  <link rel="stylesheet" href="./assets/css/editor.css">
+  <link rel="stylesheet" href="./assets/css/code.css">
 </head>
 
 <body>
-  <header class="header">
+  <header>
     <a class="header__logo" href="./index.html" data-header-logo>
       <img class="header__logo" src="./assets/images/Logo.svg" alt="Logo da Alura Dev">
-  </a>
-    <input class="input" type="text" placeholder="Busque por algo" data-header-input>
-    <div class="header__buttons">
-      <button class="header__search-btn" data-search-btn></button>
-      <button class="header__menu-btn" data-menu-btn></button>
+    </a>
+    <input class="input-pattern header__search-input" type="text" placeholder="Busque por algo" data-header-input>
+    <div class="header__nav-buttons">
+      <button class="header__search-btn" data-nav-search-btn></button>
+      <button class="header__menu-btn" data-nav-menu-btn></button>
     </div>
     <div class="header__profile" data-header-profile>
       <img class="header__user-image" src="./assets/images/profile-image.jpg" alt="Foto de perfil">
-      <p class="header__user-name">Eduardy</p>
+      <span class="header__user-name">Eduardy</span>
     </div>
-    <div class="aside-menu is-hide" data-aside-menu></div>
+    <nav class="header__nav-mobile" data-nav-mobile></nav>
   </header>
-  <main class="main">
+  <main>
     <aside class="menu">
       <h2 class="menu__title">Menu</h2>
       <ul class="menu__list" data-menu-list>
         <li class="menu__container not-opacity">
             <a href="./index.html" class="menu__icon-container">
               <img class="menu__icon" src="./assets/images/icon_code.svg" alt="">
+              <span>Editor de código</span>
             </a>
-            <a class="menu__link-code " href="./index.html" data-menu-editor>Edito de código</a>
         </li>
         <li class="menu__container is-opacity">
           <a href="./community.html" class="menu__icon-container">
             <img class="menu__icon" src="./assets/images/icon_users.svg" alt="">
+            <span>Comunidade</span>
           </a>
-          <a class="menu__link-users" href="./community.html" data-menu-community>Comunidade</a>
         </li>
       </ul>
     </aside>
-    <section class="editor">
-      <div class="editor__frame" data-color-frame>
-        <div class="editor__container">
-          <img class="editor__mac-icon" src="./assets/images/mac_icon.svg">
-          <code class="editor__code-wrapper hljs" spellcheck="false" contenteditable="true" aria-label="Editor de código" data-code-editor>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+    <section class="code">
+      <div class="code__wrapper" data-color-frame>
+        <div class="code__container">
+          <img class="code__mac-icon" src="./assets/images/mac_icon.svg">
+          <code class="code__area hljs" spellcheck="false" contenteditable="true" aria-label="Editor de código" data-code-editor>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 
@@ -70,32 +69,32 @@ const unfold = (f, seed) => {
 }</code>
         </div>
       </div>
-      <button class="editor__btn" data-hljs-btn>Visualizar com o highlight</button>
+      <button class="btn-pattern code__btn" data-hljs-btn>Visualizar com o highlight</button>
     </section>
-    <section class="project">
-      <h2 class="project__title">Seu projeto</h2>
-      <input class="input" type="text" placeholder="Nome do seu projeto">
-      <textarea class="input" type="text" placeholder="Descrição do seu projeto"></textarea>
-      <h2 class="project__title">Personalização</h2>
-      <div class="project_customization-container">
-        <select class="input" data-code-lang>
-          <option class="project__option" value="xml">HTML</option>
-          <option class="project__option" value="">CSS</option>
-          <option class="project__option" value="javascript" selected>JavaScript</option>
-          <option class="project__option" value="python">Python</option>
-          <option class="project__option" value="java">Java</option>
-          <option class="project__option" value="dart">Dart</option>
-          <option class="project__option" value="rust">Rust</option>
-          <option class="project__option" value="c++">C++</option>
+    <section class="settings">
+      <h2 class="settings__title">Seu projeto</h2>
+      <input class="input-pattern settings__input-name" type="text" placeholder="Nome do seu projeto">
+      <textarea class="input-pattern settings__input-description" type="text" placeholder="Descrição do seu projeto"></textarea>
+      <h2 class="settings__title">Personalização</h2>
+      <div class="settings__customization">
+        <select class="input-pattern settings__input-lang" data-code-lang>
+          <option value="xml">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript" selected>JavaScript</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+          <option value="dart">Dart</option>
+          <option value="rust">Rust</option>
+          <option value="c++">C++</option>
         </select>
-        <div class="color-picker__frame align-row">
-          <input class="color-picker__btn" type="color" value="#6BD1FF" data-color-picker-button>
+        <div class="settings__input-color-wrapper">
+          <input class="settings__input-color-btn" type="color" value="#6BD1FF" data-color-picker-button>
         </div>
       </div>
-      <button class="project__save-btn">Salvar projeto</button>
+      <button class="btn-pattern settings__save-btn">Salvar projeto</button>
     </section>
   </main>
-  <script src="./assets/scripts/header.js"></script>
+  <script src="./assets/scripts/nav-mobile.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   <script src="./assets/scripts/highlight.js"></script>
   <script src="./assets/scripts/color.js"></script>

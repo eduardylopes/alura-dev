@@ -1,38 +1,58 @@
-.main {
+main {
     display: grid;
-    gap: 2.5rem;
     grid-template-columns: 1fr 2.5fr 1.1fr;
+    gap: 2.5rem;
 }
 
-@media screen and (max-width: 1024px) {
-    .main {
-        grid-template-columns: 1fr;
-        gap: 0rem;
-    }
+body {
+    margin: 2rem;
+
+    background: var(--background);
+    
+    font-family: var(--general-font);
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
-@media screen and (max-width: 500px) {
-    .main {
-        grid-template-columns: 1fr;
-        gap: 0rem;
-    }
+h2 {
+    
+    text-transform: uppercase;
+    font-weight: normal;
+    
+    color: var(--text-color);
+    letter-spacing: 0.4em;
+    font-size: 0.75rem;
+    line-height: 2rem;
 }
 
-.input {
-    background: var(--input-background);
-    padding: 1rem 0.9rem;
+.input-pattern {
     width: 100%;
+    height: 100%;
+    padding: 1rem 0.9rem;
+    border-radius: 0.5rem;
     box-sizing: border-box;
-    border-radius: 8px;
     border: none;
     outline: none;
-    transition: 0.2s;
     resize: none;
-    align-self: center;
+
+    background: var(--input-background);
 }
 
-.input::placeholder {
+.input-pattern::placeholder {
+    font-weight: 300;
     color: var(--input-text-color);
+}
+
+.btn-pattern {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    border: none;
+
+    text-align: center;
 }
 
 .is-opacity {
@@ -43,12 +63,25 @@
     opacity: 1;
 }
 
-
 .is-hide {
-    display: none !important;
+    display: none;
 }
 
-.is-open {
-    display: inline !important;
+.is-active {
+    display: block;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        margin: 1rem;
+    }
 }
 
