@@ -1,0 +1,182 @@
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.project__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    border: none;
+    overflow-x: hidden;
+
+    background-color: var(--card-background);
+}
+
+.project__wrapper {
+    padding: 1rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    background-color: #6BD1FF;
+}
+
+.project__container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    /* box-sizing: border-box; */
+    border-radius: 0.5rem;
+    background-color: #141414;
+}
+
+.project__mac-icon {
+    position: relative;
+    left: 0rem;
+    width: 3.25rem;
+    height: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.project__container pre {
+    padding: 0;
+    overflow: hidden;
+}
+
+pre .project__code-area.hljs {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    background-color: #141414;
+
+    font-family: var(--text-area-font);
+    font-size: 0.875rem;
+    color: var(--text-color);
+    text-align: left;
+
+    overflow: hidden;
+}
+
+pre {
+    display: block;
+    overflow: hidden;
+    white-space: pre-wrap;
+    height: 200px;
+    width: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    pre {
+        height: auto;
+    }
+}
+
+.project__info {
+    display: flex;
+    flex-direction: column;
+
+    margin: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.project__info h2 {
+    margin-bottom: 0.5rem;
+
+    font-family: var(--general-font);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    font-size: 1.3125rem;
+    line-height: 1.9375rem;
+    color: var(--text-color);
+    text-transform: none;
+}
+
+.project__like-comment {
+    display: flex;
+}
+
+.project__icon-comment, .project__icon-like {
+    width: 1.25rem;
+    aspect-ratio: 1/1;
+}
+
+.project__icon-comment {
+    background-color: white;
+    -webkit-mask: url(../images/icon-comment.svg) no-repeat center / contain;
+}
+
+.project__icon-like {
+    background-color: white;
+    -webkit-mask: url(../images/icon-like.svg) no-repeat center / contain;
+}
+
+.project__icon-like.is-liked {
+    background-color: var(--icon-favorited);
+}
+
+.project__like, .project__comment {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 2.5rem;
+    min-width: 3.625rem;
+    padding: 0.5rem;
+
+    border: none;
+    border-radius: 1rem;
+}
+
+.project__comment:hover, .project__like:hover {
+    background-color: var(--icon-like-comment-hover);
+}
+
+.project__comment:active, .project__like:active {
+    background-color: var(--icon-like-comment-pressed);
+}
+
+.project__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.project__profile {
+    display: flex;
+    align-items: center;
+}
+
+.project__user-image {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+.project__profile span::before {
+    content: "@";
+}
+
+.project__card:nth-child(1) .project__wrapper {
+    background-color: #9AFF6B;
+}
+
+.project__card:nth-child(2) .project__wrapper {
+    background-color: #6B83FF;
+}
+
+.project__card:nth-child(3) .project__wrapper {
+    background-color: #FFC46B;
+}
+
+.project__card:nth-child(4) .project__wrapper {
+    background-color: #FF6BCD;
+}

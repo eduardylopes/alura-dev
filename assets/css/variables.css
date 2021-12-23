@@ -2,20 +2,31 @@
     --background: #051D3B;
     --aside-menu-color: #2D415B;
 
+    --card-background: #041832;
+
     --text-color: #FFFFFF;
 
     --input-text-color: #FFFFFF64;
     --input-background: #FFFFFF16;
-    --input-hover: #FFFFFF3D;
+    --input-hover: #FFFFFF24;
 
     --save-btn-normal: #5081FB;
     --save-btn-text: #051D3B;
 
-    --btn-color-picker: #6BD1FF;
-    --btn-normal: #5081FB;
-    --btn-hover: #7BA4FC;
-    --btn-pressed: #7BA4FC;
-    --btn-focus: #96B9FD;
+    --btn-filled-color-picker: #6BD1FF;
+
+    --btn-filled-normal: #5081FB;
+    --btn-filled-hover: #7BA4FC;
+    --btn-filled-focus: #96B9FD;
+
+    --btn-outlined-normal: #5081FB08;
+    --btn-outlined-hover: #5081FB24;
+    --btn-outlined-focus: #96B9FD24;
+
+    --icon-like-comment-hover: #FFFFFF08;
+    --icon-like-comment-pressed: #FFFFFF16;
+
+    --profile-hover: #FFFFFF16;
 
     --icon-btn-hover: #5081FB14;
     --icon-btn-pressed: #5081FB29;
@@ -27,8 +38,10 @@
     --icon-comment-hover: #FFFFFF08;
     --icon-comment-pressed: #FFFFFF29;
 
+
     --icon-favorite-hover: #FFFFFF08;
     --icon-favorite-pressed: #FFFFFF29;
+    --icon-favorited: #F65151;
 
     --icon-user-hover: #FFFFFF08;
 

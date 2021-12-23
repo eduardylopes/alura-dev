@@ -2,59 +2,224 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Alura Dev</title>
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/header.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&family=Roboto+Mono&display=swap">
-  <link rel="stylesheet" href="./assets/css/menu.css">
-  <link rel="stylesheet" href="./assets/css/project.css">
-  <link rel="stylesheet" href="./assets/css/editor.css">
-  <link rel="stylesheet" href="./assets/css/base.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comuidade | Alura Dev</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/settings.css">
+    <link rel="stylesheet" href="./assets/css/variables.css">
+    <link rel="stylesheet" href="./assets/css/dracula.css">
+    <link rel="stylesheet" href="./assets/css/code.css">
+    <link rel="stylesheet" href="./assets/css/projects.css">
+    <link rel="stylesheet" href="./assets/css/community.css">
 </head>
 
 <body>
-  <header class="header">
-      <a href="./index.html">
-          <img class="header__logo" src="./assets/images/Logo.svg" alt="Logo da Alura Dev" data-header-logo>
-      </a>
-    <input class="input" type="text" placeholder="Busque por algo" data-header-input>
-    <div class="header__buttons">
-      <button class="header__search-btn" data-search-btn></button>
-      <button class="header__menu-btn" data-menu-btn></button>
-    </div>
-    <div class="header__profile" data-header-profile>
-      <img class="header__user-image" src="./assets/images/profile-image.jpg" alt="Foto de perfil">
-      <p class="header__user-name">Eduardy</p>
-    </div>
-    <div class="aside-menu is-hide" data-aside-menu></div>
-  </header>
-  <main class="main">
-    <aside class="menu">
-      <h2 class="menu__title">Menu</h2>
-      <ul class="menu__list" data-menu-list>
-        <li class="menu__container is-opacity">
-            <a href="./index.html" class="menu__icon-container">
-              <img class="menu__icon" src="./assets/images/icon_code.svg" alt="">
-              <span>Editor de código</span>
-            </a>
-        </li>
-        <li class="menu__container not-opacity">
-          <a href="./community.html" class="menu__icon-container">
-            <img class="menu__icon" src="./assets/images/icon_users.svg" alt="">
-            <span>Comunidade</span>
-          </a>
-        </li>
-      </ul>
-    </aside>
-  </main>
-  <script src="./assets/scripts/header.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-  <script src="./assets/scripts/highligh.js"></script>
+    <header>
+        <a class="header__logo" href="./index.html" data-header-logo>
+            <img class="header__logo" src="./assets/images/icon-logo.svg" alt="Logo da Alura Dev">
+        </a>
+        <input class="input-pattern header__search-input" type="text" placeholder="Busque por algo" data-header-input>
+        <div class="header__nav-buttons">
+            <button class="header__search-btn" data-nav-search-btn></button>
+            <button class="header__menu-btn" data-nav-menu-btn></button>
+        </div>
+        <div class="header__profile" data-header-profile>
+            <img class="header__user-image" src="./assets/images/profile-image.jpg" alt="Foto de perfil">
+            <span class="header__user-name">Eduardy</span>
+        </div>
+        <nav class="header__nav-mobile" data-nav-mobile></nav>
+    </header>
+    <main>
+        <aside class="menu">
+            <h2 class="menu__title">Menu</h2>
+            <ul class="menu__list" data-menu-list>
+                <li class="menu__container is-opacity">
+                    <a href="./index.html" class="menu__icon-container">
+                        <img class="menu__icon" src="./assets/images/icon_code.svg" alt="">
+                        <span>Editor de código</span>
+                    </a>
+                </li>
+                <li class="menu__container not-opacity">
+                    <a href="./community.html" class="menu__icon-container">
+                        <img class="menu__icon" src="./assets/images/icon_users.svg" alt="">
+                        <span>Comunidade</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <section class="project">
+            <div class="project__card">
+                <div class="project__wrapper" data-color-frame>
+                    <div class="project__container">
+                        <img class="project__mac-icon" src="./assets/images/icon-mac.svg">
+                        <pre>
+                        <code class="project__code-area" spellcheck="false" contenteditable="false"
+                            aria-label="Editor de código" data-code-editor>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+    
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+}
+return go(f, seed, [])
+}</code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="project__info">
+                    <h2>Título do projeto</h2>
+                    <p> Essa é a descrição do meu projeto.</p>
+                    <div class="project__footer">
+                        <div class="project__like-comment">
+                            <button class="project__comment">
+                                <div class="project__icon-comment"></div>
+                                <span>9</span>
+                            </button>
+                            <button class="project__like" data-like-btn>
+                                <div class="project__icon-like" data-icon-like></div>
+                                <span data-like-count>9</span>
+                            </button>
+                        </div>
+                        <div class="project__profile">
+                            <img class="project__user-image" src="./assets/images/profile-image.jpg" alt="">
+                            <span>Eduardy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project__card">
+                <div class="project__wrapper" data-color-frame>
+                    <div class="project__container">
+                        <img class="project__mac-icon" src="./assets/images/icon-mac.svg">
+                        <pre>
+                            <code class="project__code-area hljs" spellcheck="false" contenteditable="false"
+                                aria-label="Editor de código" data-code-editor>@import url('https://fonts.googleapis.com/css?family=Nova+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #18181c;
+    display: flex;
+    align-items: center;
+</code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="project__info">
+                    <h2>Título do projeto</h2>
+                    <p> Essa é a descrição do meu projeto.</p>
+                    <div class="project__footer">
+                        <div class="project__like-comment">
+                            <button class="project__comment">
+                                <div class="project__icon-comment"></div>
+                                <span>9</span>
+                            </button>
+                            <button class="project__like" data-like-btn>
+                                <div class="project__icon-like" data-icon-like></div>
+                                <span data-like-count>9</span>
+                            </button>
+                        </div>
+                        <div class="project__profile">
+                            <img class="project__user-image" src="./assets/images/profile-image.jpg" alt="">
+                            <span>Eduardy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project__card">
+                <div class="project__wrapper" data-color-frame>
+                    <div class="project__container">
+                        <img class="project__mac-icon" src="./assets/images/icon-mac.svg">
+                        <pre>
+                            <code class="project__code-area hljs" spellcheck="false" contenteditable="false"
+                                aria-label="Editor de código" data-code-editor>let textureOldGoldURL = "https://assets.codepen.io/911157/matcapCop.jpg";
+let modelURL = "https://assets.codepen.io/911157/creativityDoodle_by_Anna_the_Scavenger.glb";
+
+// LANDSCAPE / PORTRAIT
+
+let isMobile = /(Android|iPhone|iOS|iPod|iPad)/i.test(navigator.userAgent);
+let windowRatio = window.innerWidth / window.innerHeight;
+let isLandscape = (windowRatio > 1) ? true : false;
+</code>         
+                        </pre>
+                    </div>
+                </div>
+                <div class="project__info">
+                    <h2>Título do projeto</h2>
+                    <p> Essa é a descrição do meu projeto.</p>
+                    <div class="project__footer">
+                        <div class="project__like-comment">
+                            <button class="project__comment">
+                                <div class="project__icon-comment"></div>
+                                <span>9</span>
+                            </button>
+                            <button class="project__like" data-like-btn>
+                                <div class="project__icon-like" data-icon-like></div>
+                                <span data-like-count>9</span>
+                            </button>
+                        </div>
+                        <div class="project__profile">
+                            <img class="project__user-image" src="./assets/images/profile-image.jpg" alt="">
+                            <span>Eduardy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project__card">
+                <div class="project__wrapper" data-color-frame>
+                    <div class="project__container">
+                        <img class="project__mac-icon" src="./assets/images/icon-mac.svg">
+                        <pre>
+                            <code class="project__code-area hljs" spellcheck="false" contenteditable="false"
+                                aria-label="Editor de código" data-code-editor>let textureOldGoldURL = "https://assets.codepen.io/911157/matcapCop.jpg";
+let modelURL = "https://assets.codepen.io/911157/creativityDoodle_by_Anna_the_Scavenger.glb";
+
+// LANDSCAPE / PORTRAIT
+
+let isMobile = /(Android|iPhone|iOS|iPod|iPad)/i.test(navigator.userAgent);
+let windowRatio = window.innerWidth / window.innerHeight;
+let isLandscape = (windowRatio > 1) ? true : false;
+</code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="project__info">
+                    <h2>Título do projeto</h2>
+                    <p> Essa é a descrição do meu projeto.</p>
+                    <div class="project__footer">
+                        <div class="project__like-comment">
+                            <button class="project__comment">
+                                <div class="project__icon-comment"></div>
+                                <span>9</span>
+                            </button>
+                            <button class="project__like" data-like-btn>
+                                <div class="project__icon-like" data-icon-like></div>
+                                <span data-like-count>9</span>
+                            </button>
+                        </div>
+                        <div class="project__profile">
+                            <img class="project__user-image" src="./assets/images/profile-image.jpg" alt="">
+                            <span>Eduardy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/scripts/nav-mobile.js"></script>
+    <script src="./assets/scripts/like.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll()</script>
 </body>
 
 </html>

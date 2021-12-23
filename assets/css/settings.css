@@ -36,6 +36,8 @@
     border-radius: 0.25rem;
     border: none;
     background-color: transparent;
+
+    cursor: pointer;
 }
 
 .settings__input-color-btn::-webkit-color-swatch-wrapper {

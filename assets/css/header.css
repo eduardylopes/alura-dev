@@ -12,6 +12,13 @@ header {
     display: flex;
     justify-self: flex-end;
     align-items: center;
+    padding: 12px;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.header__profile:hover {
+    background-color: var(--profile-hover);
 }
 
 .header__user-image {
@@ -39,15 +46,26 @@ header {
 }
 
 .header__search-btn {
-    background: url(../images/icon-search.svg) no-repeat center center;  
+    background: url(../images/icon-search.svg) no-repeat center center; 
+    border-radius: 16px; 
 }
 
 .header__menu-btn {
     background: url(../images/icon_menu.svg) no-repeat center center;
+    border-radius: 16px;
+}
+
+.header__menu-btn:hover {
+    background-color: var(--icon-btn-hover);
+}
+
+.header__menu-btn:active {
+    background-color: var(--icon-btn-pressed);
 }
 
 .header__close-btn {
-    background: url(../images/icon-menu-x.svg) no-repeat center center;
+    background: url(../images/icon-exit-menu.svg) no-repeat center center;
+    border-radius: 16px;
 }
 
 .header__nav-mobile {
@@ -64,8 +82,6 @@ header {
     border: none;
     
     background: var(--aside-menu-color);
-    
-    transition: 1s;
 }
 
 .header__nav-mobile .menu__list {

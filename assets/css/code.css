@@ -4,21 +4,16 @@
 }
 
 .code__wrapper {
-    min-height: 22.875rem;
     margin-bottom: 2rem;
     padding: 1rem;
     border-radius: 1rem;
     box-sizing: border-box;
-
     background-color: #6BD1FF;
 }
 
 .code__container {
     display: flex;
     flex-direction: column;
-
-    width: auto;
-    height: 100%;
     padding: 1rem;
     box-sizing: border-box;
     border-radius: 0.5rem;
