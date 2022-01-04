@@ -1,5 +1,4 @@
-import { codeInfo } from "./domGenerator.js"
-import { setCodeInfoList } from "./storage.js"
+import { codeInfo, setCodeInfoList } from "./storage.js"
 
 const codeText = document.querySelector('[data-code-text]')
 const codeTitle = document.querySelector('[data-code-title]')
@@ -7,7 +6,7 @@ const codeDescription = document.querySelector('[data-code-description]')
 const codeLang = document.querySelector('[data-code-lang]')
 const codeColor = document.querySelector('[data-color-picker-button]');
 const saveButton = document.querySelector('[data-save-button]')
-const editorColorFrame = document.querySelector('[data-color-frame]');
+const editorColorFrame = document.querySelector('[data-color-wrapper]');
 
 function getValues() {
     return {
@@ -36,6 +35,7 @@ function clearInputs() {
 }
 
 saveButton.addEventListener('click', () => {
+
     try {
         validadeFields(getValues())
         codeInfo.push(getValues())

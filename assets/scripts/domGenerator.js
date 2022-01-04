@@ -1,11 +1,14 @@
-import { getCodeInfoList } from "./storage.js"
-import { reload } from "./community.js";
+import { reload } from "./main.js";
 
 const codeContainer = document.querySelector('[data-project]')
 
-export const codeInfo = getCodeInfoList();
+export function removeCodeCard(codeInfo, index) {
+    codeInfo.splice(index, 1)
 
-export function addCode(codeInfo, index) {
+    reload();
+}
+
+export function addCodeCard(codeInfo, index) {
     
     const div = document.createElement('div')
     div.classList.add('project__card')
@@ -13,16 +16,6 @@ export function addCode(codeInfo, index) {
     div.dataset.index = index
 
     codeContainer.appendChild(div)
-}
-
-export function removeCode(codeInfo, index) {
-    codeInfo.splice(index, 1)
-
-    reload();
-}
-
-export function clearCode() {
-    codeContainer.innerHTML = ""
 }
 
 function innerHTMLCode(codeInfo) {
@@ -56,10 +49,12 @@ function innerHTMLCode(codeInfo) {
                     <span>Eduardy</span>
                 </div>
             </div>
-            <div class="project__buttons" data-project-buttons>
-            <button class="btn-pattern project__edit-btn" data-edit-btn>Editar</button>
-            <button class="btn-pattern project__remove-btn" data-remove-btn>Excluir</button>
+            <button class="project__remove-btn" data-remove-btn></button>
         </div>
         </div>`
         return html
+}
+
+export function clearCode() {
+    codeContainer.innerHTML = ""
 }

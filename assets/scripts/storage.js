@@ -5,3 +5,5 @@ export function getCodeInfoList() {
 export function setCodeInfoList(codeInfo) {
     localStorage.setItem('codeInfo', JSON.stringify(codeInfo))
 }
+
+export let codeInfo = getCodeInfoList();

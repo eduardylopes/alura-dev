@@ -165,18 +165,12 @@ pre {
     content: "@";
 }
 
-.project__card:nth-child(1) .project__wrapper {
-    background-color: #9AFF6B;
-}
+.project__remove-btn {
+    position: relative;
+    background: url(../images/icon-exit-menu.svg) no-repeat center center;
+    width: 2rem;
+    height: 2rem;
 
-.project__card:nth-child(2) .project__wrapper {
-    background-color: #6B83FF;
-}
+    top: 0;
 
-.project__card:nth-child(3) .project__wrapper {
-    background-color: #FFC46B;
-}
-
-.project__card:nth-child(4) .project__wrapper {
-    background-color: #FF6BCD;
 }

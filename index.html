@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/code-editor.css">
   <link rel="stylesheet" href="./assets/css/header.css">
-
   <link rel="stylesheet" href="./assets/css/menu.css">
   <link rel="stylesheet" href="./assets/css/settings.css">
   <link rel="stylesheet" href="./assets/css/variables.css">
@@ -53,10 +52,10 @@
       </ul>
     </aside>
     <section class="code">
-      <div class="code__wrapper" data-color-frame>
+      <div class="code__wrapper" data-color-wrapper>
         <div class="code__container">
           <img class="code__mac-icon" src="./assets/images/icon-mac.svg">
-          <code class="code__area hljs" spellcheck="false" contenteditable="true" aria-label="Editor de código" data-code-editor>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+          <code class="code__area hljs" spellcheck="false" contenteditable="true" aria-label="Editor de código" data-code-text>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 
@@ -73,8 +72,8 @@ const unfold = (f, seed) => {
     </section>
     <section class="settings">
       <h2 class="settings__title">Seu projeto</h2>
-      <input class="input-pattern settings__input-name" type="text" placeholder="Nome do seu projeto">
-      <textarea class="input-pattern settings__input-description" type="text" placeholder="Descrição do seu projeto"></textarea>
+      <input class="input-pattern settings__input-name" type="text" placeholder="Nome do seu projeto" data-code-title>
+      <textarea class="input-pattern settings__input-description" type="text" placeholder="Descrição do seu projeto" data-code-description></textarea>
       <h2 class="settings__title">Personalização</h2>
       <div class="settings__customization">
         <select class="input-pattern settings__input-lang" data-code-lang>
@@ -91,13 +90,14 @@ const unfold = (f, seed) => {
           <input class="settings__input-color-btn" type="color" value="#6BD1FF" data-color-picker-button>
         </div>
       </div>
-      <button class="btn-pattern btn--filled settings__save-btn">Salvar projeto</button>
+      <button class="btn-pattern btn--filled settings__save-btn" data-save-button>Salvar projeto</button>
     </section>
   </main>
   <script src="./assets/scripts/nav-mobile.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   <script src="./assets/scripts/highlight.js"></script>
   <script src="./assets/scripts/colorPicker.js"></script>
+  <script src="./assets/scripts/form.js" type="module"></script>
 </body>
 
 </html>

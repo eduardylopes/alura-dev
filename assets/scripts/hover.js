@@ -1,9 +1,8 @@
-import { removeCode } from "./domGenerator.js";
-import { codeInfo } from "./domGenerator.js";
+import { removeCodeCard } from "./domGenerator.js";
+import { codeInfo } from "./storage.js";
 
 const projectCard = document.querySelectorAll('.project__card')
 const removeButton = document.querySelectorAll('[data-remove-btn]')
-const editButton = document.querySelectorAll('[data-edit-btn]')
 
 projectCard.forEach(element => {
     element.addEventListener('mouseenter', () => {
@@ -20,12 +19,12 @@ projectCard.forEach(element => {
 removeButton.forEach(element => {
     element.addEventListener('click', () => {
         const index = element.closest('.project__card').getAttribute('data-index')
-        removeCode(codeInfo, index)
+        removeCodeCard(codeInfo, index)
     })
 })
 
-editButton.forEach(element => {
-    element.addEventListener('click', () => {
-        const index = element.closest('.project__card').getAttribute('data-index')
-    })
-})
+// editButton.forEach(element => {
+//     element.addEventListener('click', () => {
+//         const index = element.closest('.project__card').getAttribute('data-index')
+//     })
+// })

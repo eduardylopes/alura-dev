@@ -1,6 +1,7 @@
 const codeLanguage = document.querySelector('[data-code-lang]');
 const hljsButton = document.querySelector('[data-hljs-btn]');
-const codeArea = document.querySelector('code');
+const codeArea = document.querySelector('[data-code-text]');
+
 let isCodeHighlighted = false;
 
 function setHighlightOn() {
@@ -10,7 +11,6 @@ function setHighlightOn() {
     codeArea.setAttribute('contenteditable', 'false')
     codeArea.textContent = codeText;
     
-
     hljs.highlightElement(codeArea);
 
     hljsButton.innerText = 'Remover o hightlight';
