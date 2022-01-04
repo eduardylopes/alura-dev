@@ -32,10 +32,13 @@ function innerHTMLCode(codeInfo) {
         </div>
         <div class="project__info">
             <div class="projext__title-wrapper">
-                <h2>${codeInfo.title}</h2>
-                <button class="project__remove-btn" data-remove-btn></button>
+                <h2 data-card-title>${codeInfo.title}</h2>
+                <div>
+                    <span class="project__language-code" data-card-language>${codeInfo.codeLanguage}</span>
+                    <button class="project__remove-btn" data-remove-btn></button>
+                </div>
             </div>
-            <p>${codeInfo.description}</p>
+            <p data-card-description>${codeInfo.description}</p>
             <div class="project__footer">
                 <div class="project__like-comment">
                     <div class="project__comment">

@@ -15,6 +15,10 @@
     background-color: var(--card-background);
 }
 
+.project__card.is-hide {
+    display: none;
+}
+
 .project__wrapper {
     padding: 1rem;
     border-radius: 1rem;
@@ -186,6 +190,25 @@ pre::-webkit-scrollbar-thumb {
 .projext__title-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+}
+
+.projext__title-wrapper div {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.projext__title-wrapper h2 {
+    max-width: auto;
+}
+
+.projext__title-wrapper span {
+    padding: 0 0.5rem;
+    background-color: black;
+    border-radius: 4px;
+    height: auto;
+    width: auto;
 }
 
 .project__remove-btn {

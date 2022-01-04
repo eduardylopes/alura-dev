@@ -10,6 +10,8 @@ function init() {
     setCodeInfoList(codeInfo);
 
     removeButton();
+
+    hljs.highlightAll()
 }
 
 export function reload() {
