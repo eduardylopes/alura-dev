@@ -1,11 +1,11 @@
-const likeIcon = document.querySelectorAll('[data-icon-like]');
+const likeIcon = document.querySelectorAll('[data-like-btn]');
+const likeCount = document.querySelector('[data-like-count]')
 
 likeIcon.forEach((icon) => {
 
     let isLikeGiven = false;
 
     icon.addEventListener('click', () => {
-
         icon.classList.toggle('is-liked');
     
         if (isLikeGiven) {

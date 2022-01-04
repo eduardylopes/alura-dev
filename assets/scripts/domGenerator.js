@@ -31,7 +31,10 @@ function innerHTMLCode(codeInfo) {
             </div>
         </div>
         <div class="project__info">
-            <h2>${codeInfo.title}</h2>
+            <div class="projext__title-wrapper">
+                <h2>${codeInfo.title}</h2>
+                <button class="project__remove-btn" data-remove-btn></button>
+            </div>
             <p>${codeInfo.description}</p>
             <div class="project__footer">
                 <div class="project__like-comment">
@@ -41,7 +44,7 @@ function innerHTMLCode(codeInfo) {
                     </div>
                     <div class="project__like">
                         <button class="project__icon-like" data-like-btn></button>
-                        <span>${codeInfo.likes}</span>
+                        <span data-like-count>${codeInfo.likes}</span>
                     </div>
                 </div>
                 <div class="project__profile">
@@ -49,8 +52,6 @@ function innerHTMLCode(codeInfo) {
                     <span>Eduardy</span>
                 </div>
             </div>
-            <button class="project__remove-btn" data-remove-btn></button>
-        </div>
         </div>`
         return html
 }

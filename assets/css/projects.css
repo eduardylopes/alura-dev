@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
+    align-items: flex-start;
 }
 
 .project__card {
@@ -165,12 +166,26 @@ pre {
     content: "@";
 }
 
+.projext__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .project__remove-btn {
-    position: relative;
-    background: url(../images/icon-exit-menu.svg) no-repeat center center;
-    width: 2rem;
-    height: 2rem;
+    visibility: hidden;
+    justify-self: flex-end;
+    background-color: white;
+    width: 1rem;
+    height: 1rem;
+    -webkit-mask: url(../images/icon-exit-menu.svg) no-repeat center / contain;
+    transition: 0.15s;
+}
 
-    top: 0;
+.project__remove-btn:hover {
+    background-color: red;
+}
 
+.project__remove-btn.is-active {
+    visibility: visible;
+    transition: 0.15s;
 }

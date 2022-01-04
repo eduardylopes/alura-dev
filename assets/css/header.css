@@ -28,8 +28,6 @@ header {
     border-radius: 50%;
 }
 
-
-
 .header__aside-menu .header__profile {
     display: flex;
     
@@ -103,7 +101,6 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
 
 @media screen and (max-width: 1024px) {
 
