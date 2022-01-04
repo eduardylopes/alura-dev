@@ -172,7 +172,6 @@ pre {
 }
 
 .project__remove-btn {
-    visibility: hidden;
     justify-self: flex-end;
     background-color: white;
     width: 1rem;
@@ -183,9 +182,4 @@ pre {
 
 .project__remove-btn:hover {
     background-color: red;
-}
-
-.project__remove-btn.is-active {
-    visibility: visible;
-    transition: 0.15s;
 }

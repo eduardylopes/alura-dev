@@ -1,5 +1,6 @@
 import { clearCode, addCodeCard } from "./domGenerator.js"
 import { codeInfo, setCodeInfoList } from "./storage.js";
+import { removeButton } from "./hover.js";
 
 function init() {
     codeInfo.forEach((element, index) => {
@@ -7,7 +8,9 @@ function init() {
     });
 
     setCodeInfoList(codeInfo);
-   
+    
+    removeButton();
+
 }
 
 export function reload() {
