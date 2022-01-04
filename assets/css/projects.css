@@ -10,7 +10,7 @@
     flex-direction: column;
     border-radius: 0.5rem;
     border: none;
-    overflow-x: hidden;
+    overflow: hidden;
 
     background-color: var(--card-background);
 }
@@ -26,7 +26,6 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    /* box-sizing: border-box; */
     border-radius: 0.5rem;
     background-color: #141414;
 }
@@ -41,7 +40,7 @@
 
 .project__container pre {
     padding: 0;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 pre .project__code-area.hljs {
@@ -62,15 +61,33 @@ pre .project__code-area.hljs {
     color: var(--text-color);
     text-align: left;
 
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 pre {
     display: block;
     overflow: hidden;
     white-space: pre-wrap;
-    height: 200px;
+    max-height: 400px;
+    height: auto;
     width: auto;
+}
+
+pre::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: #141414;
+}
+
+pre::-webkit-scrollbar {
+	width: 12px;
+	background-color: #141414;
+    border-radius: 10px;
+}
+
+pre::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: white;
 }
 
 @media screen and (max-width: 1024px) {

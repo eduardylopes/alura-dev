@@ -8,9 +8,8 @@ function init() {
     });
 
     setCodeInfoList(codeInfo);
-    
-    removeButton();
 
+    removeButton();
 }
 
 export function reload() {
