@@ -44,9 +44,9 @@ h2 {
 }
 
 .btn-pattern {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    padding: 1rem 0;
     border-radius: 0.5rem;
     border: none;
     text-align: center;
@@ -83,6 +83,17 @@ h2 {
 
 .is-active {
     display: block;
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    clip-path: inset(50%);
+    left: -10000px;
 }
 
 @media screen and (max-width: 500px) {

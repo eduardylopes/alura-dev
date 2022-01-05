@@ -53,45 +53,55 @@
     </aside>
     <section class="code">
       <div class="code__wrapper" data-color-wrapper>
+      <label for="code" class="sr-only">Editor de código</label>
         <div class="code__container">
           <img class="code__mac-icon" src="./assets/images/icon-mac.svg">
-          <code class="code__area hljs" spellcheck="false" contenteditable="true" aria-label="Editor de código" data-code-text>const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-const unfold = (f, seed) => {
-  const go = (f, seed, acc) => {
-    const res = f(seed)
-    return res ? go(f, res[1], acc.concat([res[0]])) : acc
-  }
-  return go(f, seed, [])
-}</code>
+          <code class="code__area hljs" spellcheck="false" contenteditable="true" aria-label="Editor de código" id="code" name="code" data-code-text></code>
         </div>
       </div>
       <button class="btn-pattern btn--outlined code__btn" data-hljs-btn>Visualizar com o highlight</button>
     </section>
-    <section class="settings">
-      <h2 class="settings__title">Seu projeto</h2>
-      <input class="input-pattern settings__input-name" type="text" placeholder="Nome do seu projeto" data-code-title>
-      <textarea class="input-pattern settings__input-description" type="text" placeholder="Descrição do seu projeto" data-code-description></textarea>
-      <h2 class="settings__title">Personalização</h2>
-      <div class="settings__customization">
-        <select class="input-pattern settings__input-lang" data-code-lang>
-          <option value="xml">HTML</option>
-          <option value="css">CSS</option>
-          <option value="javascript" selected>JavaScript</option>
-          <option value="python">Python</option>
-          <option value="java">Java</option>
-          <option value="dart">Dart</option>
-          <option value="rust">Rust</option>
-          <option value="c++">C++</option>
-        </select>
-        <div class="settings__input-color-wrapper">
-          <input class="settings__input-color-btn" type="color" value="#6BD1FF" data-color-picker-button>
+    <form action="" class="settings">
+      <fieldset>
+        <h2 class="settings__title">Seu projeto</h2>
+        <label for="name" class="sr-only">Nome do seu projeto</label>
+        <input tabindex="-1" class="input-pattern settings__input-name" type="text" id="name" name="name" placeholder="Nome do seu projeto" data-code-title>
+        <textarea class="input-pattern settings__input-description" type="text" id="text" name="name" placeholder="Descrição do seu projeto" data-code-description></textarea>
+      </fieldset>
+      <fieldset>
+        <h2 class="settings__title">Personalização</h2>
+        <div class="settings__customization">
+          <label for="language" class="sr-only">Seleciona uma linguagem de programação</label>
+          <select class="input-pattern settings__input-lang" id="language" name="language" data-code-lang>
+            <option value="javascript" selected>JavaScript</option>
+            <option value="xml">HTML</option>
+            <option value="css">CSS</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+            <option value="dart">Dart</option>
+            <option value="rust">Rust</option>
+            <option value="c++">C++</option>
+          </select>
+          <div class="settings__input-color-wrapper">
+            <label for="color" class="sr-only">Selecione uma cor para seu projeto</label>
+            <input class="settings__input-color-btn" type="color" value="#6BD1FF" name="color" id="color" list="colors" data-color-picker-button>
+            <datalist id="colors">
+              <option value="#0597F2"></option>
+              <option value="#970FF2"></option>
+              <option value="#49D907"></option>
+              <option value="#EAF205"></option>
+              <option value="#F24607"></option>
+              <option value="#D91111"></option>
+              <option value="#C9C9C9"></option>
+              <option value="#594302"></option>
+              <option value="#FF69B4"></option>
+              <option value="#232625"></option>
+            </datalist>
+          </div>
         </div>
-      </div>
+      </fieldset>
       <button class="btn-pattern btn--filled settings__save-btn" data-save-button>Salvar projeto</button>
-    </section>
+    </form>
   </main>
   <script src="./assets/scripts/nav-mobile.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>

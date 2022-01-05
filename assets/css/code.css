@@ -1,6 +1,7 @@
 .code {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .code__wrapper {
@@ -17,7 +18,6 @@
     padding: 1rem;
     box-sizing: border-box;
     border-radius: 0.5rem;
-    
     background-color: #141414;
 }
 
@@ -32,7 +32,7 @@
 .code__area {
     display: inline-block;
     height: 100%;
-    min-height: 308px;
+    min-height: 315px;
     width: 100%;
     min-height: 40;
     border: none;
@@ -47,6 +47,24 @@
     color: var(--text-color);
     text-align: left;
     white-space: pre-wrap;
+    overflow-x: scroll;
+}
+
+code::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: #141414;
+}
+
+code::-webkit-scrollbar {
+	height: 8px;
+	background-color: #141414;
+    border-radius: 10px;
+}
+
+code::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #232625;
 }
 
 @media screen and (max-width: 500px) {

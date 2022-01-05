@@ -34,8 +34,9 @@ function clearInputs() {
     editorColorFrame.style.backgroundColor = codeColor.value;
 }
 
-saveButton.addEventListener('click', () => {
-
+saveButton.addEventListener('click', event => {
+    event.preventDefault()
+    
     try {
         validadeFields(getValues())
         codeInfo.push(getValues())

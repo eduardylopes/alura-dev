@@ -1,5 +1,4 @@
 const searchInput = document.querySelector('[data-header-input]')
-
 searchInput.addEventListener('input', () => {
 
     const cards = document.querySelectorAll('[data-index]')
@@ -15,7 +14,6 @@ searchInput.addEventListener('input', () => {
             card.style.display = 'flex'
             return
         }
-
         card.style.display = 'none'
     })
 })

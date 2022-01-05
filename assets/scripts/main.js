@@ -1,6 +1,7 @@
 import { clearCode, addCodeCard } from "./domGenerator.js"
 import { codeInfo, setCodeInfoList } from "./storage.js";
-import { removeButton } from "./hover.js";
+import { removeDOMCard } from "./domGenerator.js";
+import { likeIconButton } from "./like.js";
 
 function init() {
     codeInfo.forEach((element, index) => {
@@ -9,7 +10,9 @@ function init() {
 
     setCodeInfoList(codeInfo);
 
-    removeButton();
+    removeDOMCard();
+
+    likeIconButton();
 
     hljs.highlightAll()
 }

@@ -21,6 +21,10 @@
     background-color: var(--btn-filled-normal);
 }
 
+.menu__icon:hover {
+    opacity: 1;
+}
+
 @media screen and (max-width: 1024px) {
     .menu {
         display: none;

@@ -1,5 +1,5 @@
 import { reload } from "./main.js";
-
+import { codeInfo } from "./storage.js";
 const codeContainer = document.querySelector('[data-project]')
 
 export function removeCodeCard(codeInfo, index) {
@@ -8,14 +8,24 @@ export function removeCodeCard(codeInfo, index) {
     reload();
 }
 
+export function removeDOMCard() {
+    const removeButtons = document.querySelectorAll('[data-remove-btn]')
+    removeButtons.forEach(element => {
+        element.addEventListener('click', () => {
+            let index = element.closest('.project__card').getAttribute('data-index')
+            removeCodeCard(codeInfo, index)
+        })
+    })
+}
+
 export function addCodeCard(codeInfo, index) {
     
     const div = document.createElement('div')
     div.classList.add('project__card')
     div.innerHTML = innerHTMLCode(codeInfo)
     div.dataset.index = index
-
     codeContainer.appendChild(div)
+    div.querySelector('[data-code]').textContent = codeInfo.code
 }
 
 function innerHTMLCode(codeInfo) {
@@ -25,8 +35,7 @@ function innerHTMLCode(codeInfo) {
             <div class="project__container">
                 <img class="project__mac-icon" src="./assets/images/icon-mac.svg">
                 <pre>
-                    <code class="project__code-area ${codeInfo.codeLanguage}" spellcheck="false" contenteditable="false"
-                        aria-label="Editor de código" data-code>${codeInfo.code}</code>
+                    <code class="project__code-area" spellcheck="false" contenteditable="false" aria-label="Editor de código" data-code></code>
                 </pre>
             </div>
         </div>
