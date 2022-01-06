@@ -1,3 +1,7 @@
-Alura Challenge Front-End 2
+# Alura Challenge Front-End 2
 
-O desafio tem por objetivo criar uma plataforma web responsiva para salvar e estilizar códigos.
+Uma plataforma web responsiva para salvar e estilizar códigos, realizado durante o Alura Challenge Front-End 2.
+
+### Links
+
+- Site hospedado: [Alura Dev](https://eduardylopes.github.io/alura-dev-challenge/)
