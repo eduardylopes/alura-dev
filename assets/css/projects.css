@@ -15,8 +15,8 @@
     background-color: var(--card-background);
 }
 
-.project__card.is-hide {
-    display: none;
+.project__card:hover {
+    transform: scale(1.02);
 }
 
 .project__wrapper {
@@ -167,8 +167,13 @@ pre::-webkit-scrollbar-thumb {
 
 .project__footer {
     display: flex;
+    visibility: hidden;
     justify-content: space-between;
     margin-top: 1.5rem;
+}
+
+.project__footer.is-active {
+    visibility: visible;
 }
 
 .project__profile {
