@@ -10,8 +10,8 @@
 ### Demostração
 
 <div>
+  <img src="https://user-images.githubusercontent.com/60992933/150040520-a8caa0e1-3dcd-492b-a07a-77b508dcde57.png" width="400" />
   <img src="https://user-images.githubusercontent.com/60992933/150040517-1c8ab684-5ee5-4c16-a173-dcfe40ff678a.png" width="400" />
-  <img src="https://user-images.githubusercontent.com/60992933/149849605-16c6a72d-13d9-4cc7-98b9-d80df1da0ea1.png" width="400" />
 </div>
 
 ### Tecnologias
