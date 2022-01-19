@@ -29,13 +29,14 @@ export function addCodeCard(codeInfo, index) {
 }
 
 function innerHTMLCode(codeInfo) {
+    console.log(codeInfo.codeLanguage)
 
     const html = `
         <div class="project__wrapper" style="background-color: ${codeInfo.color}" data-color-frame>
             <div class="project__container">
                 <img class="project__mac-icon" src="./assets/images/icon-mac.svg">
                 <pre>
-                    <code class="project__code-area" spellcheck="false" contenteditable="false" aria-label="Editor de código" data-code></code>
+                    <code class="project__code-area language-${codeInfo.codeLanguage}" spellcheck="false" contenteditable="false" aria-label="Editor de código" data-code></code>
                 </pre>
             </div>
         </div>
